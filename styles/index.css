@@ -22,16 +22,15 @@ body {
 
 .text-center {
     font-family: edu tas beginner;
-    font-size: 100px;
+    font-size: 80px;
     font-weight: bolder;
-    padding: 10px 10px;
+    padding: 15px 10px;
 }
 
 .my-card {
-
     background-color: white;
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     padding: 23px 25px 15px;
 
 }
@@ -45,7 +44,7 @@ body {
     top: -10px;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40px;
+    width: 35px;
 
 
 }
