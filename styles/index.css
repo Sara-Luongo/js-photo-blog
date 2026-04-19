@@ -3,3 +3,63 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#mess-caricamento {
+    display: none;
+}
+
+#mess-errore-caricamento {
+    display: none;
+}
+
+body {
+    background-image: url(/img/cork.png);
+}
+
+.sfondo-testo {
+    background-image: url(/img/wall.png);
+}
+
+.text-center {
+    font-family: edu tas beginner;
+    font-size: 100px;
+    font-weight: bolder;
+    padding: 10px 10px;
+}
+
+.my-card {
+
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 23px 25px 15px;
+
+}
+
+.wrapper-img {
+    position: relative;
+}
+
+.img-absolute {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+
+
+}
+
+.grandezza-img {
+    width: 100%;
+
+}
+
+.text-wrapper {
+    padding: 10px;
+}
+
+.text-wrapper p {
+    margin: 0;
+    font-family: sometype mono;
+}
