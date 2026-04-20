@@ -38,6 +38,8 @@ function generatoreCards(gallery) {
 
         contenitoreCard.innerHTML = galleryHtml;
 
+
+        //gestione add event listener.
         contenitoreCard.addEventListener("click", function () {
             myModalContainer.classList.remove('none-d');
             myModalContainer.classList.add('flex-d');
