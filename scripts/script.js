@@ -40,12 +40,14 @@ function generatoreCards(gallery) {
 
         contenitoreCard.addEventListener("click", function () {
             myModalContainer.classList.remove('none-d');
+            myModalContainer.classList.add('flex-d');
             imgModal.src = dataGallery.url
 
         });
         galleryContainer.appendChild(contenitoreCard);
     }
     buttonModal.addEventListener('click', function () {
+        myModalContainer.classList.remove('flex-d');
         myModalContainer.classList.add('none-d');
     })
 };
