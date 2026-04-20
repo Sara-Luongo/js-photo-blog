@@ -41,6 +41,14 @@ body {
 
 }
 
+.pin {
+    transition: 10sec;
+}
+
+.my-card:hover .pin {
+    opacity: 0;
+}
+
 .wrapper-img {
     position: relative;
 }

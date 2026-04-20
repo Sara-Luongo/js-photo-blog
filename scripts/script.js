@@ -28,7 +28,7 @@ function generatoreCards(gallery) {
         galleryHtml = `   <div class="my-card mx-auto">
                         <div class="wrapper-img">
                             <img src="${dataGallery.url}" class="grandezza-img" alt="immagine gallery">
-                            <img src="./img/pin.svg" class="img-absolute" alt="pin">
+                            <img src="./img/pin.svg" class="img-absolute pin" alt="pin">
                         </div>
                         <div class="text-wrapper">
                             <p>${dataGallery.title}</p>
