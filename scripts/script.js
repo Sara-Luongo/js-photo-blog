@@ -17,8 +17,8 @@ function generatoreCards(gallery) {
     let galleryHtml = '';
 
     for (const dataGallery of gallery) {
-        galleryHtml += `  <div class=" col-md-6 col-lg-4  ">
-                    <div class="my-card mx-auto g-4">
+        galleryHtml += `  <div class=" col-md-6 col-lg-4 ">
+                    <div class="my-card mx-auto">
                         <div class="wrapper-img">
                             <img src="${dataGallery.url}" class="grandezza-img" alt="immagine gallery">
                             <img src="./img/pin.svg" class="img-absolute" alt="pin">
@@ -45,8 +45,7 @@ fetch(ApiUrl)
     })
     .catch(error => {
         console.error(error);
-        elemErrCaricamento.innerHTML = 'errore durante il caricamento';
-
+        elemErrCaricamento.classList.remove('none-d');
     })
     //svuota la stringa di caricamento 
     .finally(() => {
