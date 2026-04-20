@@ -12,9 +12,18 @@
     display: none;
 }
 
-body {
+#mess-errore-caricamento {
+    color: red;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+
+}
+
+#sfondo-pagina {
     background-image: url(/img/cork.png);
 }
+
 
 .sfondo-testo {
     background-image: url(/img/wall.png);
@@ -74,6 +83,7 @@ body {
 .text-wrapper p {
     margin: 0;
     font-size: 20px;
+    font-family: Sometype Mono;
 }
 
 /*stile modale*/

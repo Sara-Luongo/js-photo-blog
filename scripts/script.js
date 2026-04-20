@@ -5,6 +5,9 @@ const ApiUrl = 'https://lanciweb.github.io/demo/api/pictures/';
 //variabili che prendono elementi dall'html per i messaggi caricamento o errore. 
 const elemCaricamento = document.querySelector('#mess-caricamento');
 const elemErrCaricamento = document.querySelector('#mess-errore-caricamento');
+const sfondoTitolo = document.querySelector('.sfondo-testo');
+const titolo = document.querySelector('.text-center');
+const sfondoPagina = document.querySelector('#sfondo-pagina');
 //variabile che prende contenitore card in html.
 const galleryContainer = document.querySelector('#gallery-container');
 
@@ -43,7 +46,7 @@ function generatoreCards(gallery) {
         contenitoreCard.addEventListener("click", function () {
             myModalContainer.classList.remove('none-d');
             myModalContainer.classList.add('flex-d');
-            imgModal.src = dataGallery.url
+            imgModal.src = dataGallery.url;
 
         });
         galleryContainer.appendChild(contenitoreCard);
@@ -51,7 +54,8 @@ function generatoreCards(gallery) {
     buttonModal.addEventListener('click', function () {
         myModalContainer.classList.remove('flex-d');
         myModalContainer.classList.add('none-d');
-    })
+
+    });
 };
 
 
@@ -62,10 +66,14 @@ fetch(ApiUrl)
     })
     .then(dataJson => {
         generatoreCards(dataJson); //(passaggio datyJson alla funzione.);
+        elemCaricamento.classList.remove('none-d');
     })
     .catch(error => {
         console.error(error);
         elemErrCaricamento.classList.remove('none-d');
+        sfondoTitolo.classList.remove('sfondo-testo');
+        titolo.classList.add('none-d');
+        sfondoPagina.removeAttribute('id');
     })
     //svuota la stringa di caricamento 
     .finally(() => {
