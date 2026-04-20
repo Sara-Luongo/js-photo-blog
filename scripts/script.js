@@ -6,7 +6,13 @@ const ApiUrl = 'https://lanciweb.github.io/demo/api/pictures/';
 const elemCaricamento = document.querySelector('#mess-caricamento');
 const elemErrCaricamento = document.querySelector('#mess-errore-caricamento');
 //variabile che prende contenitore card in html.
-const galleryContainer = document.querySelector('#gallery-container')
+const galleryContainer = document.querySelector('#gallery-container');
+//riferimenti html per il modale 
+const myModalContainer = document.querySelector('#my-modal');
+const imgModal = document.querySelector('#img-full');
+const buttonModal = document.querySelector('#modal-button');
+
+
 //inner html che fa apparire a schermo il mess di caricamento.
 elemCaricamento.innerHTML = 'Caricamento';
 
@@ -38,7 +44,7 @@ function generatoreCards(gallery) {
 //chiamata API.
 fetch(ApiUrl)
     .then(response => {
-        return response.json()
+        return response.json();
     })
     .then(dataJson => {
         generatoreCards(dataJson); //(passaggio datyJson alla funzione.);
